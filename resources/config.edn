@@ -1,0 +1,16 @@
+{:port        8075
+ :database    {:host     "localhost"
+               :user     "receptionist"
+               :password "receptionist"
+               :name     "receptionist"
+               :port     5435}
+ :cors-urls   ["http://localhost.*" "http://.*platform.chargegrid.dev.*"]
+ :proxy-hosts {:transaction-service "http://transaction-service:8082"
+               :central-system      "http://central-system:8080"
+               :pricing-service     "http://pricing-service:8081"
+               :log-service         "http://log-service:8084"
+               :charge-box-service  "http://charge-box-service:8083"}
+ :auth        {:access-token-expiration  3600
+               :refresh-token-expiration 2592000            ;; 3600 * 24 * 30 = 30 days
+               :issuer                   "ChargeGrid"
+               :signing-secret           "chargegrid-is-charging-for-the-masses"}}
