@@ -1,6 +1,7 @@
 (ns receptionist.compojure.restructures
   (:require [ring.util.http-response :refer [forbidden!]]
-            [receptionist.identity.auth :refer [deserialize-permissions]])
+            [receptionist.identity.auth :refer [deserialize-permissions]]
+            [compojure.api.meta])
   (:import (java.util UUID)))
 
 (defmethod compojure.api.meta/restructure-param :current-user

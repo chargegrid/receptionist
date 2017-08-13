@@ -1,9 +1,9 @@
 {:port        8075
- :database    {:host     "localhost"
+ :database    {:host     "postgres"
                :user     "receptionist"
                :password "receptionist"
                :name     "receptionist"
-               :port     5435}
+               :port     5432}
  :cors-urls   ["http://localhost.*" "http://.*platform.chargegrid.dev.*"]
  :proxy-hosts {:transaction-service "http://transaction-service:8082"
                :central-system      "http://central-system:8080"
